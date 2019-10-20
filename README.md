@@ -1,6 +1,6 @@
 # SVGChart
 
-Small sample to create a circular chart using a SVG file and SkiaSharp to display the SVG file.   
+Small sample to create a circular chart using a SVG file and SkiaSharp to display it.  
   
 Just add  the percentage and color of each segment.
 
