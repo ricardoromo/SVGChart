@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             mc:Ignorable="d"
+             x:Class="SVGChart.MainPage">
+    <StackLayout Margin="0,100">
+        <Label Text="SVG Chart" FontSize="Title" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" />
+        <skia:SKCanvasView x:Name="skiaCanvas" PaintSurface="OnCanvasViewPaintSurface"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

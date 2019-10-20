@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg4592"
+   version="1.1"
+   viewBox="0 0 109 100"
+   height="100mm"
+   width="109mm">
+  <defs
+     id="defs4586" />
+  <metadata
+     id="metadata4589">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-197)"
+     id="layer1">
+    <g
+       transform="matrix(10,0,0,10,-603.17857,-1059.9048)"
+       id="layer1-0">
+      <g
+         transform="matrix(0.26458333,0,0,0.26458333,60.211607,125.13423)"
+         id="g3736">
+        <circle
+           r="15.915494"
+           style="fill:#ffffff"
+           class="donut-hole"
+           cx="21"
+           cy="21" />
+        <circle
+           r="15.915494"
+           style="fill:none"
+           stroke="#e6e6e6"
+           stroke-width="5"
+           class="donut-ring"
+           cx="21"
+           cy="21" />
+        <circle
+           r="15.915494"
+           style="fill:none;"
+           stroke-width="4"
+           stroke="#ce4b99"
+           stroke-dasharray="40, 60"
+           stroke-dashoffset="50"
+           class="donut-segment"
+           cx="21"
+           cy="21" />
+      </g>
+    </g>
+  </g>
+</svg>
