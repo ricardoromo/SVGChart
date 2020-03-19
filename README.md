@@ -17,7 +17,7 @@ new List<Tuple<int, string>>()
 ```
 
 ## Chart Options
-- Cirlce Chart.
+- Circle Chart.
 - Horizontal Bar Chart.
 - Vertical Bar Chart.
 
