@@ -6,18 +6,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
-    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.396" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
     <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Charts\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Pages\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\Chart.svg" />
+    <None Remove="Resources\BarChart.svg" />
+    <None Remove="Resources\VBarChart.svg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Chart.svg" />
+    <EmbeddedResource Include="Resources\CircleChart.svg" />
+    <EmbeddedResource Include="Resources\BarChart.svg" />
+    <EmbeddedResource Include="Resources\VBarChart.svg" />
   </ItemGroup>
 </Project>
