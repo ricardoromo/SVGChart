@@ -1,6 +1,6 @@
 # SVGChart
 
-Small sample to create a chart using a SVG file and SkiaSharp to display it.  
+Small sample about how to create a chart using a SVG file and SkiaSharp to display it.  
   
 Just create a list of segments with the percentage and color 
 
