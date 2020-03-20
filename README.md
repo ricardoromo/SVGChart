@@ -17,13 +17,14 @@ new List<Tuple<int, string>>()
 ```
 
 ## Chart Options
-- Circle Chart.
+
 - Horizontal Bar Chart.
+- Circle Chart.
 - Vertical Bar Chart.
 
 <p float="left">
   <img src="Readme/horizontalChart.png" width="250">
-  <img src="Readme/circleChart.png" width="250">
+  <img src="Readme/circularChart.png" width="250">
   <img src="Readme/verticalChart.png" width="250">
 </p>
 
