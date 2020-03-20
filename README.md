@@ -22,12 +22,9 @@ new List<Tuple<int, string>>()
 - Vertical Bar Chart.
 
 <p float="left">
-  <img src="Readme/CircleChart1.png" width="250">
-  <img src="Readme/CircleChart2.png" width="250">
-  <img src="Readme/BarChart1.png" width="250">
-  <img src="Readme/BarChart2.png" width="250">
-  <img src="Readme/VBarChart1.png" width="250">
-  <img src="Readme/VBarChart2.png" width="250">
+  <img src="Readme/horizontalChart.png" width="250">
+  <img src="Readme/circleChart.png" width="250">
+  <img src="Readme/verticalChart.png" width="250">
 </p>
 
 
