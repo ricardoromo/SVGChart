@@ -17,7 +17,7 @@
                 Text="Circle Chart" />
             <skia:SKCanvasView
                 x:Name="skiaCanvas"
-                HorizontalOptions="FillAndExpand"
+                HorizontalOptions="CenterAndExpand"
                 PaintSurface="OnCanvasViewPaintSurface"
                 VerticalOptions="FillAndExpand" />
         </StackLayout>

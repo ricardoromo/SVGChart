@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    id="svg4592"
    version="1.1"
-   viewBox="0 0 109 100"
-   height="100mm"
-   width="109mm">
+   preserveAspectRatio="xMidYMid meet"
+   viewBox="-10 0 100 100"
+   class="main-class">
   <defs
      id="defs4586" />
   <metadata
@@ -25,8 +25,21 @@
     </rdf:RDF>
   </metadata>
   <g class="bars">
-		<rect class="rect-segment" fill="#3d5599" width="10" height="100" y="0" x="0"/>
-		<text class="text-segment" x="0" y="98" font-size="3.5px"  font-weight="bold" text-anchor="middle" fill="black">100%</text>
+		<rect class="rect-segment" fill="#3d5599" width="10" height="100" y="0" x="1"/>
+		<text class="text-segment" x="5" y="98" font-size="3.5px" font-weight="bold" text-anchor="middle" fill="black">100%</text>
+    <text x="-9" y="100" fill="black" font-size="3.5px" text-anchor="right" >0%</text>
+    <text x="-9" y="92" fill="black" font-size="3.5px" text-anchor="right">10%</text>
+    <text x="-9" y="82" fill="black" font-size="3.5px" text-anchor="right">20%</text>
+    <text x="-9" y="72" fill="black" font-size="3.5px" text-anchor="right">30%</text>
+    <text x="-9" y="62" fill="black" font-size="3.5px" text-anchor="right">40%</text>
+    <text x="-9" y="52" fill="black" font-size="3.5px" text-anchor="right">50%</text>
+    <text x="-9" y="42" fill="black" font-size="3.5px" text-anchor="right">60%</text>
+    <text x="-9" y="32" fill="black" font-size="3.5px" text-anchor="right">70%</text>
+    <text x="-9" y="22" fill="black" font-size="3.5px" text-anchor="right">80%</text>
+    <text x="-9" y="12" fill="black" font-size="3.5px" text-anchor="right">90%</text>
+    <text x="-9" y="2" fill="black" font-size="3.5px" text-anchor="right">100%</text>
+    <line x1="0" y1="-3" x2="0" y2="100" style="stroke:rgb(0,0,0);stroke-width:.3" />
+    <line class="bottom-line" x1="0" y1="100" x2="100" y2="100" style="stroke:rgb(0,0,0);stroke-width:.3" />
  	</g>
 </svg>
 	

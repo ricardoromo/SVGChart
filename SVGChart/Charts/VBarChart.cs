@@ -7,7 +7,7 @@ namespace SVGChart.Charts
 {
     public class VBarChart : BaseChart
     {
-        public bool DisplayValues { get; set; } = false;
+        public bool DisplayValues { get; set; } = true;
         public double BarWidth { get; set; } = 10;
 
         public VBarChart(List<Tuple<int, string>> segments) : base(segments)
@@ -28,8 +28,13 @@ namespace SVGChart.Charts
 
         private void UpdateSvg(XmlDocument document, IEnumerable<Tuple<int, string>> elements)
         {
-            double barPosition = 0;
-            double textPosition = 5;
+            double barPosition = 1;
+            double textPosition = 6;
+            double svgWidth = (elements.Count() * 10) + 13;
+
+            var svgElement = document.DocumentElement;
+            var svgAttr = svgElement.Attributes;
+            svgAttr["viewBox"].Value = $"-10 -5 {svgWidth} 107";
 
             var root = document.DocumentElement.GetElementsByTagName("g").Cast<XmlElement>().LastOrDefault();
 
@@ -38,6 +43,15 @@ namespace SVGChart.Charts
 
             var textNodeToCopy = root.GetElementsByTagName("text").Cast<XmlElement>()
                                 .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "text-segment");
+
+            var lineNodeToCopy = root.GetElementsByTagName("line").Cast<XmlElement>()
+                                .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "bottom-line");
+
+            var newLineNode = lineNodeToCopy.CloneNode(true);
+            var lineAttr = newLineNode.Attributes;
+            lineAttr["x2"].Value = ((elements.Count() * BarWidth) + 5).ToString();
+           
+            root.InsertAfter(newLineNode, root.LastChild);
 
             foreach (var el in elements)
             {
@@ -70,6 +84,7 @@ namespace SVGChart.Charts
                 }
             }
 
+            root.RemoveChild(lineNodeToCopy);
             root.RemoveChild(barNodeToCopy);
             root.RemoveChild(textNodeToCopy);
         }

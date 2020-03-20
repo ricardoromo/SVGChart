@@ -20,14 +20,14 @@ namespace SVGChart.Pages
         {
             base.OnSizeAllocated(width, height);
             InitChartValue();
-            InitChart(width);
+            InitChart();
         }
 
 
-        private void InitChart(double size)
+        private void InitChart()
         {
-            skiaCanvas.HeightRequest = size;
-            skiaCanvas.WidthRequest = size;
+            skiaCanvas.HeightRequest = 330;
+            skiaCanvas.WidthRequest = 370;
             skiaCanvas.InvalidateSurface();
         }
 
@@ -35,12 +35,14 @@ namespace SVGChart.Pages
         {
             chartSegments = new List<Tuple<int, string>>()
             {
-                new Tuple<int, string>(86, "#ff8787"),
+                new Tuple<int, string>(67, "#ff8787"),
                 new Tuple<int, string>(100, "#42c0ff"),
                 new Tuple<int, string>(37, "#b5f547"),
-                new Tuple<int, string>(100, "#ffa14f"),
+                new Tuple<int, string>(45, "#ffa14f"),
                 new Tuple<int, string>(10, "#40bf40"),
-                new Tuple<int, string>(55, "#ff4d4d")
+                new Tuple<int, string>(55, "#ff4d4d"),
+                new Tuple<int, string>(66, "#b5f547"),
+                new Tuple<int, string>(100, "#ffa14f"),
             };
 
             barChart = new BarChart(chartSegments);

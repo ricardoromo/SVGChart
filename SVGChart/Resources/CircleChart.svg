@@ -52,7 +52,7 @@
            style="fill:none;"
            stroke-width="5"
            stroke="#ce4b99"
-           stroke-dasharray="40, 60"
+           stroke-dasharray="40 60"
            stroke-dashoffset="50"
            class="donut-segment"
            cx="21"

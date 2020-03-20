@@ -26,8 +26,8 @@ namespace SVGChart.Pages
 
         private void InitChart(double size)
         {
-            skiaCanvas.HeightRequest = size;
-            skiaCanvas.WidthRequest = size;
+            skiaCanvas.HeightRequest =350;
+            skiaCanvas.WidthRequest = 400;
             skiaCanvas.InvalidateSurface();
         }
 
@@ -43,6 +43,11 @@ namespace SVGChart.Pages
                 new Tuple<int, string>(55, "#ff4d4d"),
                 new Tuple<int, string>(95, "#668cff"),
                 new Tuple<int, string>(15, "#ffd633"),
+                new Tuple<int, string>(86, "#ff8787"),
+                new Tuple<int, string>(100, "#42c0ff"),
+                new Tuple<int, string>(37, "#b5f547"),
+                new Tuple<int, string>(66, "#ffa14f"),
+
             };
 
             vBarChart = new VBarChart(chartSegments);

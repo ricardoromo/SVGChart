@@ -8,6 +8,7 @@ namespace SVGChart.Charts
     public class CircleChart : BaseChart
     {
         public string RingColor { get; set; } = "#e6e6e6";
+        public string CharTitle { get; set; } = "73%";
         public float StrokeWidth { get; set; } = 5;
 
         public CircleChart(List<Tuple<int, string>> segments) : base(segments)
@@ -32,6 +33,14 @@ namespace SVGChart.Charts
             var previousOffset = -1;
             var previousSpace = -1;
             var root = document.DocumentElement.GetElementsByTagName("g").Cast<XmlElement>().LastOrDefault();
+
+            var centerTextNode = root.GetElementsByTagName("text").Cast<XmlElement>()
+              .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "center-text");
+
+            centerTextNode.InnerText = CharTitle;
+
+            var textAttr = centerTextNode.Attributes;
+            textAttr["fill"].Value = "#cccccc";
 
             var ringNode = root.GetElementsByTagName("circle").Cast<XmlElement>()
                                 .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "donut-ring");
@@ -70,16 +79,6 @@ namespace SVGChart.Charts
             }
 
             root.RemoveChild(segmentNodeToCopy);
-
-            var centerTextCopy = root.GetElementsByTagName("text").Cast<XmlElement>()
-                          .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "center-text");
-
-            var textNode = centerTextCopy.CloneNode(true);
-            var textAttr = textNode.Attributes;
-            textAttr["fill"].Value = "#cccccc";
-            textNode.InnerText = "10%";
-            root.InsertAfter(textNode, root.LastChild);
-            root.RemoveChild(centerTextCopy);
         }
     }
 }

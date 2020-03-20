@@ -39,12 +39,13 @@ namespace SVGChart
             if (svg == null)
                 return;
 
-            float canvasMin = Math.Min(width, height);
-            var svgMax = Math.Max(svg.Picture.CullRect.Width, svg.Picture.CullRect.Height);
-            var scale = canvasMin / svgMax;
-            var matrix = SKMatrix.MakeScale(scale, scale);
+            float xRatio = width / svg.Picture.CullRect.Width;
+            float yRatio = height / svg.Picture.CullRect.Height;
+            float ratio = Math.Min(xRatio, yRatio);
 
-            canvas.DrawPicture(svg.Picture, ref matrix);
+            var matrix = SKMatrix.MakeScale(ratio, ratio);
+
+            canvas.DrawPicture(svg.Picture,ref matrix);
         }
 
         private static Stream XmlDocumentToStream(this XmlDocument xml)

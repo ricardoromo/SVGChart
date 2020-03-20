@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{890D6BFF-FE15-47AA-B220-6A855A703C7F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SVGChart/Charts/CircleChart.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SVGChart/Pages/CircleChartPage.xaml.cs">
     <Files>
-      <File FileName="SVGChart/Charts/BarChart.cs" Line="8" Column="38" />
-      <File FileName="SVGChart/Charts/VBarChart.cs" Line="7" Column="2" />
-      <File FileName="SVGChart/Charts/CircleChart.cs" Line="1" Column="1" />
+      <File FileName="SVGChart/Pages/CircleChartPage.xaml.cs" Line="29" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SVGChart" expanded="True">
             <Node name="SVGChart" expanded="True">
-              <Node name="Charts" expanded="True">
-                <Node name="CircleChart.cs" selected="True" />
+              <Node name="Charts" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="CircleChartPage.xaml" expanded="True">
+                  <Node name="CircleChartPage.xaml.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

@@ -17,7 +17,7 @@
                 Text="Horizontal Bar Chart" />
             <skia:SKCanvasView
                 x:Name="skiaCanvas"
-                HorizontalOptions="FillAndExpand"
+                HorizontalOptions="CenterAndExpand"
                 PaintSurface="OnCanvasViewPaintSurface"
                 VerticalOptions="CenterAndExpand" />
         </StackLayout>

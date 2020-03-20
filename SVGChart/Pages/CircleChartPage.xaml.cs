@@ -21,7 +21,7 @@ namespace SVGChart.Pages
         {
             base.OnSizeAllocated(width, height);
             InitChartValue();
-            InitChart(width);
+            InitChart(350);
         }
 
 

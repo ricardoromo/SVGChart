@@ -21,6 +21,7 @@
     <None Remove="Resources\Chart.svg" />
     <None Remove="Resources\BarChart.svg" />
     <None Remove="Resources\VBarChart.svg" />
+    <None Remove="Resources\CircleChart.svg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\CircleChart.svg" />

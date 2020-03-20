@@ -7,7 +7,7 @@ namespace SVGChart.Charts
 {
     public class BarChart : BaseChart
     {
-        public bool DisplayValues { get; set; } = false;
+        public bool DisplayValues { get; set; } = true;
         public double BarHeight { get; set; } = 10;
 
         public BarChart(List<Tuple<int, string>> segments) : base(segments)
@@ -30,6 +30,13 @@ namespace SVGChart.Charts
         {
             double barPosition = 0;
             double textPosition = (BarHeight + 3) / 2;
+            double countElementSize = (elements.Count() * BarHeight);
+            double svgHeight = countElementSize + 13;
+            string lineSize = (countElementSize + 1).ToString();
+
+            var svgElement = document.DocumentElement;
+            var svgAttr = svgElement.Attributes;
+            svgAttr["viewBox"].Value = $"-2 0 110 {svgHeight}";
 
             var root = document.DocumentElement.GetElementsByTagName("g").Cast<XmlElement>().LastOrDefault();
 
@@ -38,6 +45,29 @@ namespace SVGChart.Charts
 
             var textNodeToCopy = root.GetElementsByTagName("text").Cast<XmlElement>()
                                 .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "text-segment");
+
+            var textValueNode = root.GetElementsByTagName("text").Cast<XmlElement>()
+                                .Where(x => x.HasAttribute("class") && x.Attributes["class"].Value == "text-value");
+
+
+            var lineNode = root.GetElementsByTagName("line").Cast<XmlElement>()
+                                .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "bottom-line");
+
+            var lineAttr = lineNode.Attributes;
+            lineAttr["y1"].Value = lineSize;
+            lineAttr["y2"].Value = lineSize;
+
+            var leftLineNode = root.GetElementsByTagName("line").Cast<XmlElement>()
+                                .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "left-line");
+
+            var leftLineAttr = leftLineNode.Attributes;
+            leftLineAttr["y2"].Value = lineSize;
+
+            foreach (var node in textValueNode)
+            {
+                var textValueAttr = node.Attributes;
+                textValueAttr["y"].Value = (countElementSize + 5).ToString();
+            }
 
             foreach (var el in elements)
             {
