@@ -19,12 +19,12 @@ new List<Tuple<int, string>>()
 ## Chart Options
 
 - Horizontal Bar Chart.
-- Circle Chart.
+- Donut Chart.
 - Vertical Bar Chart.
 
 <p float="left">
   <img src="Readme/horizontalChart.png" width="250">
-  <img src="Readme/circularChart.png" width="250">
+  <img src="Readme/donutChart.png" width="250">
   <img src="Readme/verticalChart.png" width="250">
 </p>
 
