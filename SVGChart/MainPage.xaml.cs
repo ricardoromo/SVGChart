@@ -23,7 +23,7 @@ namespace SVGChart
 
         void Circle_Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new CircleChartPage());
+            Navigation.PushAsync(new DonutChartPage());
         }
 
         void HBar_Button_Clicked(System.Object sender, System.EventArgs e)

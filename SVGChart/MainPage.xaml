@@ -13,7 +13,7 @@
             Clicked="Circle_Button_Clicked"
             HeightRequest="40"
             HorizontalOptions="FillAndExpand"
-            Text="Circle Chart"
+            Text="Donut Chart"
             TextColor="White" />
         <Button
             BackgroundColor="#ff4d4d"

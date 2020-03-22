@@ -5,13 +5,13 @@ using System.Xml;
 
 namespace SVGChart.Charts
 {
-    public class CircleChart : BaseChart
+    public class DonutChart : BaseChart
     {
         public string RingColor { get; set; } = "#e6e6e6";
         public string CharTitle { get; set; } = "73%";
         public float StrokeWidth { get; set; } = 5;
 
-        public CircleChart(List<Tuple<int, string>> segments) : base(segments)
+        public DonutChart(List<Tuple<int, string>> segments) : base(segments)
         {
             LoadSvg();
         }

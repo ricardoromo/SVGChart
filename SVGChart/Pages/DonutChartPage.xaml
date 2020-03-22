@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
-    x:Class="SVGChart.Pages.CircleChartPage"
+    x:Class="SVGChart.Pages.DonutChartPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms">
@@ -14,7 +14,7 @@
                 FontAttributes="Bold"
                 FontSize="Title"
                 HorizontalOptions="CenterAndExpand"
-                Text="Circle Chart" />
+                Text="Donut Chart" />
             <skia:SKCanvasView
                 x:Name="skiaCanvas"
                 HorizontalOptions="CenterAndExpand"

@@ -6,13 +6,13 @@ using Xamarin.Forms;
 
 namespace SVGChart.Pages
 {
-    public partial class CircleChartPage : ContentPage
+    public partial class DonutChartPage : ContentPage
     {
-        CircleChart circleChart;
+        DonutChart donutChart;
         //Percentage and HexColor
         private List<Tuple<int, string>> chartSegments;
 
-        public CircleChartPage()
+        public DonutChartPage()
         {
             InitializeComponent();
         }
@@ -44,12 +44,12 @@ namespace SVGChart.Pages
                 new Tuple<int, string>(5, "#ff4281"),
             };
 
-            circleChart = new CircleChart(chartSegments);
+            donutChart = new DonutChart(chartSegments);
         }
 
         private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
-            this.circleChart.DrawPictureAndFit(e);
+            this.donutChart.DrawPictureAndFit(e);
         }
 
     }
