@@ -29,5 +29,12 @@
             HorizontalOptions="FillAndExpand"
             Text="Vertical Bar Chart"
             TextColor="White" />
+        <Button
+            BackgroundColor="#ff4d4d"
+            Clicked="LinesBar_Button_Clicked"
+            HeightRequest="40"
+            HorizontalOptions="FillAndExpand"
+            Text="Lines Bar Chart"
+            TextColor="White" />
     </StackLayout>
 </ContentPage>

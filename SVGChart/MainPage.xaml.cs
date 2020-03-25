@@ -36,5 +36,10 @@ namespace SVGChart
             Navigation.PushAsync(new VerticalBarChartPage());
         }
 
+        void LinesBar_Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new LineChartPage());
+        }
+
     }
 }

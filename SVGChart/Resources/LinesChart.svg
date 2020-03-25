@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg4592"
+   version="1.1"
+   viewBox="-10 -5 105 105">
+  <defs
+     id="defs4586" />
+  <metadata
+     id="metadata4589">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g>
+  <polyline
+    class="line-chart"
+    style="fill:none"
+     x="0"
+     y="0"
+     stroke="#ffa14f"
+     stroke-width="1"  
+     points="0,90 10,50 20,40 30,30 40,70 50,60 60,60 70,20 80,90 90,60" />
+    <circle class="point-chart" r="2" cx="0" cy="90" fill="red"/>
+    <text x="-9" y="100" fill="black" font-size="3.5px" text-anchor="right" >0%</text>
+    <text x="-9" y="92" fill="black" font-size="3.5px" text-anchor="right">10%</text>
+    <text x="-9" y="82" fill="black" font-size="3.5px" text-anchor="right">20%</text>
+    <text x="-9" y="72" fill="black" font-size="3.5px" text-anchor="right">30%</text>
+    <text x="-9" y="62" fill="black" font-size="3.5px" text-anchor="right">40%</text>
+    <text x="-9" y="52" fill="black" font-size="3.5px" text-anchor="right">50%</text>
+    <text x="-9" y="42" fill="black" font-size="3.5px" text-anchor="right">60%</text>
+    <text x="-9" y="32" fill="black" font-size="3.5px" text-anchor="right">70%</text>
+    <text x="-9" y="22" fill="black" font-size="3.5px" text-anchor="right">80%</text>
+    <text x="-9" y="12" fill="black" font-size="3.5px" text-anchor="right">90%</text>
+    <text x="-9" y="2" fill="black" font-size="3.5px" text-anchor="right">100%</text>
+    <line x1="-1" y1="-3" x2="-1" y2="100" style="stroke:rgb(0,0,0);stroke-width:.3" />
+    <line class="bottom-line" x1="-1" y1="100" x2="200" y2="100" style="stroke:rgb(0,0,0);stroke-width:.3" />
+  </g>
+</svg>
+

@@ -22,10 +22,12 @@
     <None Remove="Resources\BarChart.svg" />
     <None Remove="Resources\VBarChart.svg" />
     <None Remove="Resources\CircleChart.svg" />
+    <None Remove="Resources\LinesChart.svg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\CircleChart.svg" />
     <EmbeddedResource Include="Resources\BarChart.svg" />
     <EmbeddedResource Include="Resources\VBarChart.svg" />
+    <EmbeddedResource Include="Resources\LinesChart.svg" />
   </ItemGroup>
 </Project>

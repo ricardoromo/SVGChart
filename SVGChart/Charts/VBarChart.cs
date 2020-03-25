@@ -30,7 +30,7 @@ namespace SVGChart.Charts
         {
             double barPosition = 1;
             double textPosition = 6;
-            double svgWidth = (elements.Count() * 10) + 13;
+            double svgWidth = (elements.Count() * BarWidth) + 13;
 
             var svgElement = document.DocumentElement;
             var svgAttr = svgElement.Attributes;
