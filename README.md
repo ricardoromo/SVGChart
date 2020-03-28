@@ -4,6 +4,18 @@ Small sample about how to create a chart using a SVG file and SkiaSharp to displ
   
 Just create a list of segments with the percentage and color 
 
+## Setup
+
+Available on NuGet: https://www.nuget.org/packages/SVGChart.Nuget
+
+## Chart Options
+
+- Horizontal Bar Chart.
+- Donut Chart.
+- Vertical Bar Chart.
+- Line Chart
+
+
 ```C#
 new List<Tuple<int, string>>()
 {
@@ -24,14 +36,6 @@ new List<int>()
    66,34,88,20,90,55,65,80,45
 };
 ```
-
-## Chart Options
-
-- Horizontal Bar Chart.
-- Donut Chart.
-- Vertical Bar Chart.
-- Line Chart
-
 <p float="left">
   <img src="Readme/horizontalChart.png" width="250">
   <img src="Readme/donutChart.png" width="250">
@@ -39,4 +43,6 @@ new List<int>()
   <img src="Readme/lineChart.png" width="250">
 </p>
 
+##Copyright and license
 
+Code released under the MIT license.
