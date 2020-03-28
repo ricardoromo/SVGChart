@@ -43,6 +43,6 @@ new List<int>()
   <img src="Readme/lineChart.png" width="250">
 </p>
 
-##Copyright and license
+## Copyright and license
 
 Code released under the MIT license.
