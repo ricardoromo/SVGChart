@@ -1,4 +1,4 @@
-# SVGChart
+# SVG Chart
 
 Small sample about how to create a chart using a SVG file and SkiaSharp to display it.  
   
