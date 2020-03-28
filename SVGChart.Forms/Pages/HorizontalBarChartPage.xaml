@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="SVGChart.Pages.HorizontalBarChartPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:svgChart="clr-namespace:SVGChart.Nuget.Views;assembly=SVGChart.Nuget">
+    <ContentPage.Content>
+        <svgChart:HorizontalBarChartView
+            BarHeight="Medium"
+            DisplayValue="True"
+            HeightRequest="600"
+            HorizontalOptions="CenterAndExpand"
+            ItemSource="{Binding .}"
+            VerticalOptions="CenterAndExpand"
+            WidthRequest="450" />
+    </ContentPage.Content>
+</ContentPage>

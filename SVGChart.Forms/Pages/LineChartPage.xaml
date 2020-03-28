@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="SVGChart.Pages.LineChartPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:svgChart="clr-namespace:SVGChart.Nuget.Views;assembly=SVGChart.Nuget">
+    <ContentPage.Content>
+        <svgChart:LineChartView
+            HeightRequest="450"
+            ItemSource="{Binding .}"
+            LineWidth="1"
+            PointSize="2"
+            PointsDistance="12"
+            ShowPoints="true"
+            WidthRequest="450" />
+    </ContentPage.Content>
+</ContentPage>

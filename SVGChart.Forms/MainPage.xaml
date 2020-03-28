@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SVGChart.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:svgChart="clr-namespace:SVGChart.Nuget.Views;assembly=SVGChart.Nuget"
+    Title="SVG Charts">
+    <StackLayout
+        HorizontalOptions="CenterAndExpand"
+        Spacing="10"
+        VerticalOptions="CenterAndExpand">
+        <Button
+            BackgroundColor="#ff4d4d"
+            Clicked="HBar_Button_Clicked"
+            HeightRequest="40"
+            HorizontalOptions="FillAndExpand"
+            Text="Horizontal Bar Chart"
+            TextColor="White" />
+        <Button
+            BackgroundColor="#ff4d4d"
+            Clicked="Circle_Button_Clicked"
+            HeightRequest="40"
+            HorizontalOptions="FillAndExpand"
+            Text="Donut Chart"
+            TextColor="White" />
+        <Button
+            BackgroundColor="#ff4d4d"
+            Clicked="VBar_Button_Clicked"
+            HeightRequest="40"
+            HorizontalOptions="FillAndExpand"
+            Text="Vertical Bar Chart"
+            TextColor="White" />
+        <Button
+            BackgroundColor="#ff4d4d"
+            Clicked="LinesBar_Button_Clicked"
+            HeightRequest="40"
+            HorizontalOptions="FillAndExpand"
+            Text="Lines Bar Chart"
+            TextColor="White" />
+    </StackLayout>
+</ContentPage>

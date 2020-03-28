@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="SVGChart.Pages.VerticalBarChartPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:svgChart="clr-namespace:SVGChart.Nuget.Views;assembly=SVGChart.Nuget">
+    <ContentPage.Content>
+        <ScrollView Orientation="Horizontal">
+            <svgChart:VerticalBarChartView
+                BarWidth="Medium"
+                DisplayValue="False"
+                HeightRequest="450"
+                ItemSource="{Binding .}"
+                WidthRequest="450" />
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

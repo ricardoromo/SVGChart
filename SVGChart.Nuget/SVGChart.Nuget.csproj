@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Ricardo Romo Gonzalez</Authors>
+    <Version>1.0.0</Version>
+    <Description>Library to create simple charts such Horizontal Bar,Vertical Bar, Donut and Lines on Xamarin Forms.</Description>
+    <PackageProjectUrl>https://github.com/ricardoromo/SVGChart</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ricardoromo/SVGChart</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageTags>community, xamarin, android, xamarin.forms, ios, charts</PackageTags>
+    <Copyright>Copyright (c) 2020 Ricardo Romo </Copyright>
+    <Owners>Ricardo Romo Gonzalez</Owners>
+    <Summary>Library to create simple charts such Horizontal Bar,Vertical Bar, Donut and Lines on Xamarin Forms.</Summary>
+    <Title>SVGCharts</Title>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+  
+  <ItemGroup>
+      <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="1.68.1.1" />
+    <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Extension\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Charts\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\BarChart.svg" />
+    <None Remove="Resources\VerticalBarChart.svg" />
+    <None Remove="Resources\DonutChart.svg" />
+    <None Remove="Resources\LineChart.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\HorizontalBarChart.svg" />
+    <EmbeddedResource Include="Resources\VerticalBarChart.svg" />
+    <EmbeddedResource Include="Resources\DonutChart.svg" />
+    <EmbeddedResource Include="Resources\LineChart.svg" />
+  </ItemGroup>
+</Project>

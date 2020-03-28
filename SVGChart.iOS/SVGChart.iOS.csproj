@@ -120,14 +120,14 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.396" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\SVGChart\SVGChart.csproj">
-      <Project>{0560CA86-246F-4934-89C6-4659B6EAC9F6}</Project>
+    <ProjectReference Include="..\SVGChart.Forms\SVGChart.csproj">
+      <Project>{32CA85E0-48D2-4CA3-A1A1-3E730D186FA1}</Project>
       <Name>SVGChart</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

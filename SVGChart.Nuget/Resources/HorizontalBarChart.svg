@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg4592"
+   version="1.1"
+   viewBox="-2 0 110 110">
+  <defs
+     id="defs4586" />
+  <metadata
+     id="metadata4589">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g class="bars" >
+		<rect class="rect-segment" fill="#3d5599" width="100" height="10" y="80" x="0"/>
+		<text class="text-segment" x="2" y="6" font-size="3.5px" font-weight="bold" text-anchor="right" fill="black">100%</text>
+		<text class="text-value" x="-1" y="103" fill="black" font-size="3.5px" text-anchor="right" >0%</text>
+	    <text class="text-value" x="8" y="103" fill="black" font-size="3.5px" text-anchor="right">10%</text>
+	    <text class="text-value" x="18" y="103" fill="black" font-size="3.5px" text-anchor="right">20%</text>
+	    <text class="text-value" x="28" y="103" fill="black" font-size="3.5px" text-anchor="right">30%</text>
+	    <text class="text-value" x="38" y="103" fill="black" font-size="3.5px" text-anchor="right">40%</text>
+	    <text class="text-value" x="48" y="103" fill="black" font-size="3.5px" text-anchor="right">50%</text>
+	    <text class="text-value" x="58" y="103" fill="black" font-size="3.5px" text-anchor="right">60%</text>
+	    <text class="text-value" x="68" y="103" fill="black" font-size="3.5px" text-anchor="right">70%</text>
+	    <text class="text-value" x="78" y="103" fill="black" font-size="3.5px" text-anchor="right">80%</text>
+	    <text class="text-value" x="88" y="103" fill="black" font-size="3.5px" text-anchor="right">90%</text>
+	    <text class="text-value" x="98" y="103" fill="black" font-size="3.5px" text-anchor="right">100%</text>
+	    <line class="left-line" x1="0" y1="-3" x2="0" y2="100" style="stroke:rgb(0,0,0);stroke-width:.3" />
+	    <line class="bottom-line" x1="0" y1="100" x2="100" y2="100" style="stroke:rgb(0,0,0);stroke-width:.3" />
+ 	</g>
+</svg>
+	
