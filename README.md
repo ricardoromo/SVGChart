@@ -1,21 +1,56 @@
 # SVG Chart
 
-Small sample about how to create a chart using a SVG file and SkiaSharp to display it.  
+SVGChart is a library to create simple charts on Xamarin.Forms using a SVG file and SkiaSharp to display it.  
   
-Just create a list of segments with the percentage and color 
+ ## How to use it?
 
-## Setup
+You could clone this repository or simply add the NuGet package https://www.nuget.org/packages/SVGChart.Nuget
 
-Available on NuGet: https://www.nuget.org/packages/SVGChart.Nuget
+Just add the package reference and add the chart view.
 
-## Chart Options
+```XAML
+ xmlns:svgChart="clr-namespace:SVGChart.Nuget.Views;assembly=SVGChart.Nuget"
+
+ <svgChart:VerticalBarChartView
+                BarWidth="Medium"
+                DisplayValue="False"
+                HeightRequest="450"
+                ItemSource="{Binding ChartValues}"
+                WidthRequest="450" />
+```
+
+### Chart Options
 
 - Horizontal Bar Chart.
 - Donut Chart.
 - Vertical Bar Chart.
 - Line Chart
 
+### Chart Properties
+ * Horizontal Bar Chart.
+  - DisplayValues
+  - BarHeight
+  
+* Donut Chart.
+  - RingColor
+  - FillColor
+  - TitleColor
+  - ChartTitle
+  - StrokeWidth
+  
+* Vertical Bar Chart.
+  - DisplayValues
+  - BarWidth
+  
+* Line Chart
+  - LineColor
+  - PointsColor
+  - PointsDistance
+  - PointSize
+  - LineWidth
+  - ShowPoints
 
+For Horizontal and Vertical Bar Chart add the a list with the percentage and color of each bar.
 ```C#
 new List<Tuple<int, string>>()
 {
@@ -23,12 +58,20 @@ new List<Tuple<int, string>>()
     new Tuple<int, string>(100, "#42c0ff"),
     new Tuple<int, string>(37, "#b5f547"),
     new Tuple<int, string>(100, "#ffa14f"),
-    new Tuple<int, string>(10, "#40bf40"),
-    new Tuple<int, string>(55, "#ff4d4d")
 };
 ```
 
-For Line Chart just add a list of points
+For Donut Chart add the a list with the percentage and color of each segment. 
+```C#
+new List<Tuple<int, string>>()
+{
+    new Tuple<int, string>(20, "#ff8787"),
+    new Tuple<int, string>(10, "#42c0ff"),
+    new Tuple<int, string>(35, "#b5f547")
+};
+```
+
+For Line Chart just add a list of percentage for the position of each point. 
 
 ```C#
 new List<int>()
@@ -36,6 +79,7 @@ new List<int>()
    66,34,88,20,90,55,65,80,45
 };
 ```
+
 <p float="left">
   <img src="Readme/horizontalChart.png" width="250">
   <img src="Readme/donutChart.png" width="250">
@@ -43,6 +87,6 @@ new List<int>()
   <img src="Readme/lineChart.png" width="250">
 </p>
 
-## Copyright and license
+### Copyright and license
 
 Code released under the MIT license.
