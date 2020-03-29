@@ -19,7 +19,7 @@ Just add the package reference and chart view.
                 WidthRequest="450" />
 ```
 
-### Chart Options
+## Chart Options
 
 - Horizontal Bar Chart.
 - Donut Chart.
@@ -27,7 +27,8 @@ Just add the package reference and chart view.
 - Line Chart
 
 ### Chart Properties
- * Horizontal Bar Chart.
+
+* Horizontal Bar Chart.
   - DisplayValues
   - BarHeight
   
