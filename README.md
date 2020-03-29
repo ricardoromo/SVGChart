@@ -6,7 +6,7 @@ SVGChart is a library to create simple charts on Xamarin.Forms using a SVG file 
 
 You could clone this repository or simply add the NuGet package https://www.nuget.org/packages/SVGChart.Nuget
 
-Just add the package reference and add the chart view.
+Just add the package reference and chart view.
 
 ```XAML
  xmlns:svgChart="clr-namespace:SVGChart.Nuget.Views;assembly=SVGChart.Nuget"
