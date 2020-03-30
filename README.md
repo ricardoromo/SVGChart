@@ -21,10 +21,10 @@ Just add the package reference and chart view.
 
 ## Chart Options
 
-- Horizontal Bar Chart.
-- Donut Chart.
-- Vertical Bar Chart.
-- Line Chart
+- HorizontalBarChartView
+- DonutChartView
+- VerticalBarChartView
+- LineChartView
 
 ### Chart Properties
 
