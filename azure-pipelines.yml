@@ -28,3 +28,11 @@ steps:
     arguments: '--configuration $(buildConfiguration)'
     projects: 'SVGChart.Nuget/SVGChart.Nuget.csproj'
 
+- task: DotNetCoreCLI@2
+  displayName: "dotnet pack"
+  inputs:
+    command: 'pack'
+    arguments: '--configuration $(buildConfiguration)'
+    packagesToPack: 'CommonLib/CommonLib.csproj'
+    nobuild: true
+    versioningScheme: 'off'
