@@ -33,6 +33,6 @@ steps:
   inputs:
     command: 'pack'
     arguments: '--configuration $(buildConfiguration)'
-    packagesToPack: 'CommonLib/CommonLib.csproj'
+    packagesToPack: 'SVGChart.Nuget/SVGChart.Nuget.csproj'
     nobuild: true
     versioningScheme: 'off'
