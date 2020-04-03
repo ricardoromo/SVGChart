@@ -8,14 +8,15 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
-    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
-    <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
-    <PackageReference Include="SVGChart.Nuget" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\Chart.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SVGChart.Nuget\SVGChart.Nuget.csproj" />
   </ItemGroup>
 </Project>

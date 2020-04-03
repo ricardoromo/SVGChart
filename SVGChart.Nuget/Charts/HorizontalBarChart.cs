@@ -9,7 +9,7 @@ namespace SVGChart.Nuget.Charts
 {
     internal class HorizontalBarChart : BaseChart
     {
-        public bool DisplayValues { get; set; } = true;
+        public bool DisplayValues { get; set; }
         public double BarHeight { get; set; }
 
         public HorizontalBarChart() 
@@ -28,9 +28,13 @@ namespace SVGChart.Nuget.Charts
                 double svgHeight = countElementSize + 13;
                 string lineSize = (countElementSize + 1).ToString();
 
+                if (svgHeight <= 110)
+                    svgHeight = 110;
+
                 var svgElement = document.DocumentElement;
                 var svgAttr = svgElement.Attributes;
-                svgAttr["viewBox"].Value = $"-2 0 110 {svgHeight}";
+
+                svgAttr["viewBox"].Value = $"-2 0 {svgHeight} {svgHeight}";
 
                 var root = document.DocumentElement.GetElementsByTagName("g").Cast<XmlElement>().LastOrDefault();
 

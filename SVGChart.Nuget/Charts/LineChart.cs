@@ -33,7 +33,11 @@ namespace SVGChart.Nuget.Charts
 
                 var svgElement = document.DocumentElement;
                 var svgAttr = svgElement.Attributes;
-                svgAttr["viewBox"].Value = $"-10 -5 {svgWidth} 105";
+
+                if (svgWidth <= 110)
+                    svgWidth = 110;
+
+                svgAttr["viewBox"].Value = $"-10 -5 {svgWidth} {svgWidth}";
 
                 var root = document.DocumentElement.GetElementsByTagName("g").Cast<XmlElement>().LastOrDefault();
 
@@ -42,6 +46,13 @@ namespace SVGChart.Nuget.Charts
 
                 var pointNodeToCopy = root.GetElementsByTagName("circle").Cast<XmlElement>()
                                     .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "point-chart");
+
+
+                var lineToCopy = root.GetElementsByTagName("line").Cast<XmlElement>()
+                                    .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "bottom-line");
+
+                var lineAttr = lineToCopy.Attributes;
+                lineAttr["x2"].Value = ((elements.Count() * PointsDistance)).ToString();
 
 
                 foreach (var el in elements)
