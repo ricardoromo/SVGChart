@@ -35,15 +35,15 @@ namespace SVGChart.Nuget.Extension
 
             canvas.Clear(SKColors.Transparent);
 
-            if (svg == null || svg.Picture ==  null)
+            if (svg == null || svg.Picture == null)
                 return;
 
             float xRatio = width / svg.Picture.CullRect.Width;
-            float yRatio = height / svg.Picture.CullRect.Height;
+            float yRatio = height  / svg.Picture.CullRect.Height;
+
             float ratio = Math.Min(xRatio, yRatio);
 
             var matrix = SKMatrix.MakeScale(ratio, ratio);
-
             canvas.DrawPicture(svg.Picture, ref matrix);
         }
 

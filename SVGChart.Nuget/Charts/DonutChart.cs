@@ -13,7 +13,7 @@ namespace SVGChart.Nuget.Charts
         public Color RingColor { get; set; }
         public Color FillColor { get; set; }
         public Color TitleColor { get; set; }
-        public string CharTitle { get; set; }
+        public string ChartTitle { get; set; }
         public int StrokeWidth { get; set; }
 
         public DonutChart()
@@ -52,7 +52,7 @@ namespace SVGChart.Nuget.Charts
                 var centerTextNode = root.GetElementsByTagName("text").Cast<XmlElement>()
                   .FirstOrDefault(x => x.HasAttribute("class") && x.Attributes["class"].Value == "center-text");
 
-                centerTextNode.InnerText = CharTitle;
+                centerTextNode.InnerText = ChartTitle;
 
                 var textAttr = centerTextNode.Attributes;
                 textAttr["fill"].Value = TitleColor.ToHex();

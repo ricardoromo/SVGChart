@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Specialized;
 using SkiaSharp.Views.Forms;
 using SVGChart.Nuget.Charts;
 using SVGChart.Nuget.Extension;
@@ -7,10 +9,10 @@ using Xamarin.Forms;
 
 namespace SVGChart.Nuget.Views
 {
-    public class BaseChartView : ContentView
+    public class BaseChartView : ContentView 
     {
         public static readonly BindableProperty ItemSourceProperty =
-            BindableProperty.Create(nameof(ItemSource), typeof(IEnumerable), typeof(DonutChartView), default(IEnumerable), propertyChanged: OnItemsSourceChanged);
+            BindableProperty.Create(nameof(ItemSource), typeof(IEnumerable), typeof(BaseChartView), default(IEnumerable), propertyChanged: OnItemsSourceChanged);
 
         public IEnumerable ItemSource
         {
@@ -18,21 +20,23 @@ namespace SVGChart.Nuget.Views
             set { SetValue(ItemSourceProperty, value); }
         }
 
-        public BaseChart Chart { get; set; }
+        protected BaseChart Chart { get; set; }
+        protected private SKCanvasView canvasView;
+        protected private ChartType chartType;
 
-        private SKCanvasView canvasView;
-        public BaseChartView()
+        public BaseChartView(ChartType charType)
         {
-            LoadCanvasView();
+            this.chartType = charType;
+            InitCanvasView();
             InitHandlers();
         }
 
-        private void LoadCanvasView()
+        private void InitCanvasView()
         {
             canvasView = new SKCanvasView
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.FillAndExpand,                
+                VerticalOptions = LayoutOptions.FillAndExpand,
             };
             this.Content = canvasView;
         }
@@ -43,17 +47,27 @@ namespace SVGChart.Nuget.Views
             canvasView.PaintSurface += OnCanvasViewPaintSurface;
         }
 
-        public virtual void LoadChart(ChartType chartType)
+        private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs e)
         {
-            canvasView.HeightRequest = this.HeightRequest;
-            canvasView.WidthRequest = this.WidthRequest;
+            Chart.DrawPictureAndFit(e);
+        }
+
+
+        public virtual void OnPropertyChanged()
+        {
+            LoadChart();
+        }
+
+        public virtual void LoadChart()
+        {
             Chart.LoadSvg(chartType);
             canvasView.InvalidateSurface();
         }
 
-        private void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs e)
+        public virtual void SetChartPorperties()
         {
-            Chart.DrawPictureAndFit(e);
+            canvasView.HeightRequest = this.HeightRequest;
+            canvasView.WidthRequest = this.WidthRequest;
         }
 
         static void OnItemsSourceChanged(BindableObject bindable, object oldValue, object newValue)
@@ -64,6 +78,21 @@ namespace SVGChart.Nuget.Views
         public virtual void OnItemsSourceChanged()
         {
             Chart.Segments = ItemSource;
+            AddCollectionChanged(ItemSource);
+        }
+
+        private void AddCollectionChanged(IEnumerable list)
+        {
+            if (list is INotifyCollectionChanged collection)
+            {
+                collection.CollectionChanged -= Collection_CollectionChanged; ;
+                collection.CollectionChanged += Collection_CollectionChanged; ;
+            }
+        }
+
+        public virtual void Collection_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            
         }
     }
 }
