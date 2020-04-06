@@ -10,25 +10,23 @@
         <vm:VerticalBarChartViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <ScrollView Margin="0,30" Orientation="Horizontal">
-            <StackLayout
-                HorizontalOptions="FillAndExpand"
-                Spacing="30"
-                VerticalOptions="FillAndExpand">
-                <Button
-                    BackgroundColor="#ff4d4d"
-                    Command="{Binding UpdateValuesCommand}"
-                    HeightRequest="40"
-                    HorizontalOptions="CenterAndExpand"
-                    Text=" Update Values "
-                    TextColor="White" />
-                <svgChart:VerticalBarChartView
-                    BarWidth="Medium"
-                    DisplayValue="{Binding IsValuesVisible}"
-                    HeightRequest="400"
-                    ItemSource="{Binding ChartSegments}"
-                    WidthRequest="600" />
-            </StackLayout>
-        </ScrollView>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Spacing="30"
+            VerticalOptions="FillAndExpand">
+            <Button
+                BackgroundColor="#ff4d4d"
+                Command="{Binding UpdateValuesCommand}"
+                HeightRequest="40"
+                HorizontalOptions="CenterAndExpand"
+                Text=" Update Values "
+                TextColor="White" />
+            <svgChart:VerticalBarChartView
+                BarWidth="Medium"
+                DisplayValue="{Binding IsValuesVisible}"
+                HeightRequest="400"
+                ItemSource="{Binding ChartSegments}"
+                WidthRequest="400" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -43,11 +43,13 @@ namespace SVGChart.ViewModels
             ChartTitle = "80%";
         }
 
-      
+
+        
         private void UpdateValuesCommandExecuted(object obj)
         {
-            ChartTitle = "123..";
-            ChartSegments.RemoveAt(0);
+            var random = new Random();
+            var randomNumber = random.Next(0, 100);
+            ChartTitle = $"{randomNumber}%";
         }
 
     }
