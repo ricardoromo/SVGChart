@@ -8,6 +8,7 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
+    <PackageReference Include="SVGChart.Nuget" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pages\" />
@@ -15,8 +16,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\Chart.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SVGChart.Nuget\SVGChart.Nuget.csproj" />
   </ItemGroup>
 </Project>

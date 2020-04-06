@@ -49,9 +49,6 @@ namespace SVGChart.ViewModels
         private void UpdateValuesCommandExecuted(object obj)
         {
             IsValuesVisible = !IsValuesVisible;
-            var random = new Random();
-            var randomNumber = random.Next(0, 100);
-            ChartSegments.Add(new Tuple<int, string>(randomNumber, "#ff8787"));
         }
     }
 }
